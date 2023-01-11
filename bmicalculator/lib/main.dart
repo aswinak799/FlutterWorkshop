@@ -34,9 +34,13 @@ class _MyAppState extends State<MyApp> {
               children: [
                 TextFormField(
                   controller: height,
-                  decoration: InputDecoration(
-                    hintText: "Enter Height in meters",
-                    border: OutlineInputBorder(),
+                  decoration: InputDecoration(hintText: "Enter Height in meter",
+                      filled: true,
+                      fillColor: Colors.blue.shade100,
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10),
+                        borderSide: BorderSide.none,
+                      )
                   ),
                 ),
                 SizedBox(
@@ -44,9 +48,14 @@ class _MyAppState extends State<MyApp> {
                 ),
                 TextFormField(
                   controller: weight,
-                  decoration: InputDecoration(
-                      hintText: "Enter Weight in kgs",
-                      border: OutlineInputBorder()),
+                  decoration: InputDecoration(hintText: "Enter Weight",
+                    filled: true,
+                    fillColor: Colors.blue.shade100,
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      borderSide: BorderSide.none,
+                    )
+                ),
                 ),
                 SizedBox(
                   height: 20,
@@ -78,7 +87,8 @@ class _MyAppState extends State<MyApp> {
       double heightSq = inputHeight * inputHeight;
       double result = inputWeight / heightSq;
       outPut = result.toStringAsFixed(2);
-      print(outPut);
+
+
     });
   }
 }
